@@ -8,6 +8,23 @@
     #set text(
         font: "Open Sans"
     )
+    #show heading: titre => [
+        #if titre.level == 1 [
+            #set align(center)
+            #set text(size: 13pt)
+            #titre
+        ] else if titre.level == 2 [
+            #set align(left)
+            #set text(size: 11pt)
+            \
+            #underline[#titre]
+        ] else [
+            #set align(left)
+            #set text(size: 11pt)
+            \
+            #titre
+        ]
+    ]
     #align(center, text(size: 17pt, weight: "bold")[ #titre])
     \
     #contenu

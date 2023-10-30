@@ -12,12 +12,13 @@
         #if titre.level == 1 [
             #set align(center)
             #set text(size: 13pt)
+            \
             #titre
         ] else if titre.level == 2 [
             #set align(left)
             #set text(size: 11pt)
             \
-            #underline[#titre]
+            _#underline[#titre]_
         ] else [
             #set align(left)
             #set text(size: 11pt)
